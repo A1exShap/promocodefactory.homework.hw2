@@ -14,7 +14,8 @@ namespace Otus.Teaching.PromoCodeFactory.WebHost.Extensions
                 Id = customer.Id,
                 FirstName = customer.FirstName,
                 LastName = customer.LastName,
-                Email = customer.Email
+                Email = customer.Email,
+                IsDeleted = customer.IsDeleted
             };
 
         public static CustomerResponse ToResponse(this Customer customer)
@@ -24,6 +25,7 @@ namespace Otus.Teaching.PromoCodeFactory.WebHost.Extensions
                 FirstName = customer.FirstName,
                 LastName = customer.LastName,
                 Email = customer.Email,
+                IsDeleted = customer.IsDeleted,
                 Preferences = customer.Preferences.Select(x => new PreferenceResponse()
                 {
                     Id = x.PreferenceId,
@@ -38,6 +40,7 @@ namespace Otus.Teaching.PromoCodeFactory.WebHost.Extensions
             customer.Email = request.Email;
             customer.FirstName = request.FirstName;
             customer.LastName = request.LastName;
+            customer.IsDeleted = request.IsDeleted;
 
             if (preferences is null || !preferences.Any())
                 return customer;

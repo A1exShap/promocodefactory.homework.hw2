@@ -15,12 +15,12 @@ namespace Otus.Teaching.PromoCodeFactory.DataAccess.Data
 
         public void Init()
         {
-            _context.Database.EnsureDeleted();
-            _context.Database.EnsureCreated();
+            //_context.Database.EnsureDeleted();
+            //_context.Database.EnsureCreated();
 
-            AddRange(FakeDataFactory.Employees);
-            AddRange(FakeDataFactory.Preferences);
-            AddRange(FakeDataFactory.Customers);
+            //AddRange(FakeDataFactory.Employees);
+            //AddRange(FakeDataFactory.Preferences);
+            //AddRange(FakeDataFactory.Customers);
         }
 
         private void AddRange<T>(IEnumerable<T> values) where T : BaseEntity
