@@ -1,4 +1,4 @@
-﻿namespace Otus.Teaching.PromoCodeFactory.WebHost.Models
+﻿namespace Otus.Teaching.PromoCodeFactory.WebHost.Models.RequestModels
 {
     public class GivePromoCodeRequest
     {

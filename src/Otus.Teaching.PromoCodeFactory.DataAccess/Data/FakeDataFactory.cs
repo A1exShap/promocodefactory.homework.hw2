@@ -78,7 +78,19 @@ namespace Otus.Teaching.PromoCodeFactory.DataAccess.Data
                         Email = "ivan_sergeev@mail.ru",
                         FirstName = "Иван",
                         LastName = "Петров",
-                        //TODO: Добавить предзаполненный список предпочтений
+                        Preferences = new List<CustomerPreference>()
+                        {
+                            new CustomerPreference()
+                            {
+                                CustomerId = customerId,
+                                PreferenceId = Guid.Parse("ef7f299f-92d7-459f-896e-078ed53ef99c")
+                            },
+                            new CustomerPreference()
+                            {
+                                CustomerId = customerId,
+                                PreferenceId = Guid.Parse("c4bda62e-fc74-4256-a956-4760b3858cbd")
+                            }
+                        }
                     }
                 };
 

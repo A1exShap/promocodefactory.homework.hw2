@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Otus.Teaching.PromoCodeFactory.Core.Abstractions.Repositories;
 using Otus.Teaching.PromoCodeFactory.Core.Domain.Administration;
-using Otus.Teaching.PromoCodeFactory.WebHost.Models;
+using Otus.Teaching.PromoCodeFactory.WebHost.Models.ResponseModels;
 
 namespace Otus.Teaching.PromoCodeFactory.WebHost.Controllers
 {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Otus.Teaching.PromoCodeFactory.Core.Abstractions.Repositories;
 using Otus.Teaching.PromoCodeFactory.Core.Domain;
@@ -26,6 +27,34 @@ namespace Otus.Teaching.PromoCodeFactory.DataAccess.Repositories
         public Task<T> GetByIdAsync(Guid id)
         {
             return Task.FromResult(Data.FirstOrDefault(x => x.Id == id));
+        }
+
+        public Task<IEnumerable<T>> GetByIdsAsync(params Guid[] ids)
+            => Task.FromResult(Data.Where(x => ids.Contains(x.Id)).AsEnumerable());
+
+        public Task CreateAsync(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateAsync(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<T> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<T>> GetByPredicate(Expression<Func<T, bool>> predicate)
+        {
+            throw new NotImplementedException();
         }
     }
 }
