@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Otus.Teaching.PromoCodeFactory.Core.Domain.PromoCodeManagement
 {
@@ -7,12 +6,15 @@ namespace Otus.Teaching.PromoCodeFactory.Core.Domain.PromoCodeManagement
         :BaseEntity
     {
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
 
         public string FullName => $"{FirstName} {LastName}";
 
         public string Email { get; set; }
 
-        //TODO: Списки Preferences и Promocodes 
+        public bool IsDeleted { get; set; }
+
+        public virtual ICollection<CustomerPreference> Preferences { get; set; }
     }
 }
